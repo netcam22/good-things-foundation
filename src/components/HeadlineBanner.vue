@@ -1,16 +1,16 @@
 <script setup>
+import {useHeadlineBannerStore} from '@/stores/headlineBanner';
+const store = useHeadlineBannerStore();
 </script>
 
 <template>
 <section class = "headline-box headline-box--image"></section>
 <section class = "headline-box headline-box--blue" aria-labelledby="social-change-charity">
   <h1 class = "headline-box__heading" id="social-change-charity">
-    We are a social change charity, helping people to improve their lives
-    through digital.
+    {{store.getHeading}}
   </h1>
-  <p class = "headline-box__text">We tackle the most pressing issues of our time, working with partners in thousands 
-  of communities across the UK and further afield.</p>
-  <button class = "headline-box__button" type="button">Learn more about us</button>
+  <p class = "headline-box__text">{{store.getText}}</p>
+  <button class = "headline-box__button" type="button">{{store.getButtonText}}</button>
 </section>
 </template>
 

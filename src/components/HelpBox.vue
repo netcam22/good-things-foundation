@@ -1,15 +1,15 @@
 <script setup>
+import {useHelpBoxStore} from '@/stores/helpBox';
+const store = useHelpBoxStore();
 import HelpForm from './HelpForm.vue';
-
 </script>
 
 <template>
- <section class = "help-box" aria-labelledby="how-can-we-help">
+<section class = "help-box" aria-labelledby="how-can-we-help">
   
-          <h1 class = "help-box__heading" id="how-can-we-help">How can we help you?</h1>
+          <h1 class = "help-box__heading" id="how-can-we-help">{{store.getHeading}}</h1>
           <p class = "help-box__text">
-            Let us know who you are and what you're looking for, 
-            and we'll help you get to the right place.
+            {{store.getText}}
           </p>
 
           <HelpForm/>
