@@ -19,7 +19,8 @@ const store = useWhatWeDoStore();
             :text="item.text"
           />
       </div>
-      <button class = "about-us__button about-us__button--red" type="button">More about what we do</button>
+      <button class = "about-us__button about-us__button--red" type="button">
+        {{store.getButtonText}}</button>
     </section>
 
 </template>
