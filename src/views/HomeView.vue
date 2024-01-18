@@ -10,9 +10,8 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 <style scoped>
 main {
-  margin: 0;
-  padding: 0;
-  background-color: var(--white);
-  color: var(--dark);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>
