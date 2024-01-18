@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 defineProps({
   msg: {
     type: String,
@@ -23,6 +24,12 @@ defineProps({
         </ul>
         </span>
       </nav>
+      <!-- 
+        to refactor to use vue router
+        <nav> 
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>-->
 </template>
 
 <style scoped>

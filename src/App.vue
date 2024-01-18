@@ -1,23 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
 import NavMenu from './components/NavMenu.vue';
+import SearchForm from './components/SearchForm.vue';
 </script>
 
 <template>
   <header class = "header">
-      <form class = 'search-form'>
-        <label class = 'search-form__icon' for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-        <input class = 'search-form__input' type="search" id="search" name="search" placeholder="Search">
-      </form>
-
+    <SearchForm />
       <button class = 'mode-button mode-button--white' type="button">Learn</button>
       <button class = 'mode-button mode-button--red' type="button">Donate</button>
       <img class = "logo" src="./assets/logo.png" alt="Good Things Foundation Logo">
       <NavMenu />
-      <!-- <nav> 
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>-->
   </header>
 
   <RouterView />
@@ -38,36 +31,6 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1% 6% 0 6%;
-}
-
-.search-form{
-  flex-basis: 50%;
-  padding: 0.5%;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  .search-form {
-    flex-basis: 78%;
-  } 
-}
-.search-form__icon{
-  font-size: 1.4rem;
-  margin: 0;
-}
-
-.search-form__input{
-  background-color: var(--white);
-  border: var(--dark) solid 1px;
-  z-index: 1000;
-}
-
-@media (min-width: 768px) {
-  .search-form__input {
-    flex-basis: 78%;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-  } 
 }
 .logo {
   width:50%;
