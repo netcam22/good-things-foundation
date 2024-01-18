@@ -9,7 +9,7 @@
     through digital.
   </h1>
   <p class = "headline-box__text">We tackle the most pressing issues of our time, working with partners in thousands 
-  of communities accross the UK and further afield.</p>
+  of communities across the UK and further afield.</p>
   <button class = "headline-box__button" type="button">Learn more about us</button>
 </section>
 </template>

@@ -15,21 +15,15 @@ defineProps({
           <div class = "navbar__element navbar__element--cross" ><i class="fa fa-x"></i></div>
         </div>
         <ul class = "navbar__list navbar__list--style">
-          <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Home</a></li>
-          <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">What to do</a></li>
-          <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">The Digital Divide</a></li>
-          <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Get Involved</a></li>
-          <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Our Network</a></li>
-          <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Insights</a></li>
+          <li class = "navbar__item" ><RouterLink :to="{name: 'home'}">Home</RouterLink></li>
+          <li class = "navbar__item" ><RouterLink :to="{name: 'what-to-do'}">What To Do</RouterLink></li>
+          <li class = "navbar__item" ><RouterLink :to="{name: 'the-digital-divide'}">The Digital Divide</RouterLink></li>
+          <li class = "navbar__item" ><RouterLink :to="{name: 'get-involved'}">Get Involved</RouterLink></li>
+          <li class = "navbar__item" ><RouterLink :to="{name: 'our-network'}">Our Network</RouterLink></li>
+          <li class = "navbar__item" ><RouterLink :to="{name: 'insights'}">Insights</RouterLink></li>
         </ul>
         </div>
       </nav>
-      <!-- 
-        to refactor to use vue router
-        <nav> 
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>-->
 </template>
 
 <style scoped>
@@ -110,6 +104,30 @@ html[data-theme=dark] .navbar__list--style {
 .navbar__item {
   margin: 0;
   padding: 0;
+}
+
+.navbar__item a {
+  text-decoration: none;
+  font-size: 2rem;
+  word-break: keep-all;
+  cursor: pointer;
+  color: var(--light);
+}
+
+.navbar__item a:hover {
+  color: var(--dark);
+}
+
+@media (min-width: 768px) {
+  .navbar__item a {
+    font-size: 1.2rem;
+  }
+  .navbar__item a {
+    color: var(--dark);
+  }
+  .navbar__item a:hover {
+    color: var(--red-purple);
+  }
 }
 .navbar__anchor {
   text-decoration: none;
