@@ -7,3 +7,11 @@ import HelloWorld from '@/components/HelloWorld.vue';
     <HelloWorld />
   </main>
 </template>
+
+<style scoped>
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</style>
