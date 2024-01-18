@@ -1,14 +1,15 @@
 <script setup>
+import {useHeroBannerStore} from '@/stores/heroBanner';
+const store = useHeroBannerStore();
 </script>
 
 <template>
   <section class = "hero" aria-labelledby="get-online-week">
-    <h1 class = "hero__heading" id="get-online-week">Get online week 2021</h1>
+    <h1 class = "hero__heading" id="get-online-week">{{store.getHeading}}</h1>
       <p class = "hero__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        {{store.getText}}
       </p>
-      <button class = "hero__button" type="button">Get involved now!</button>
+      <button class = "hero__button" type="button">{{store.getButtonText}}</button>
   </section>
 </template>
 
