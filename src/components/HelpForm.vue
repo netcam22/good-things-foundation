@@ -1,23 +1,21 @@
 <script setup>
+import {useHelpFormStore} from '@/stores/helpForm';
+import SelectInput from './SelectInput.vue';
+const store = useHelpFormStore();
 </script>
 
 <template>
-          <form class ="help-box__form" id="i-form">
-            <label class ="help-box__label" for="i-am">I am</label>
-              <select class ="help-box__select" id="i-am">
-                <option value="individual">an individual</option>
-                <option value="organisation">an organisation</option>
-                <option value="group">a group</option>
-                <option value="journalist">a journalist</option>
-              </select>
-              <label class ="help-box__label" for="i-want">and I want</label>
-              <select class ="help-box__select" id="i-want">
-                <option value="learn">to learn</option>
-                <option value="volunteer">to get advice</option>
-                <option value="volunteer">to volunteer</option>
-                <option value="contact">to speak to someone</option>
-              </select>
-              <button class ="help-box__button help-box__button--red" type="button">Start now</button>
+          <form :class="store.getFormClass" :id="store.getFormId">
+            <SelectInput 
+            v-for="(item) in store.getSelectBoxes"
+            :key="item.id"
+            :labelClass="item.labelClass"
+            :label="item.label"
+            :selectClass="item.selectClass" 
+            :selectId="item.selectId" 
+            :options="item.options"
+          />
+            <button :class="store.getButtonClass" type="button">{{ store.getButtonText }}</button>
           </form>
 </template>
 
@@ -38,21 +36,6 @@
   .help-box__form {
     flex-direction: row;
   }
-}
-
-.help-box__label {
-  background-color: var(--white);
-  padding: 0.2%;
-  margin: 0.2%;
-}
-
-.help-box__select {
-  background-color: var(--white);
-  color: var(--mid-blue);
-  padding: 0.2%;
-  margin: 0.2%;
-  width: auto;
-  font-size: 1.2rem;
 }
 
 .help-box__button {
