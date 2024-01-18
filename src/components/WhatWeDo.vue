@@ -2,7 +2,6 @@
 import { useWhatWeDoStore } from '@/stores/whatWeDo';
 import AboutCard from './AboutCard.vue';
 const store = useWhatWeDoStore();
-console.log(store.getThingsWeDo);
 </script>
 
 <template>

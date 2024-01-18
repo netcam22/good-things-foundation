@@ -1,11 +1,7 @@
 <script setup>
-import { RouterLink } from 'vue-router';
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+import NavItem from './NavItem.vue';
+import { useNavItemsStore } from '@/stores/navItems';
+const store = useNavItemsStore();
 </script>
 
 <template>
@@ -15,12 +11,12 @@ defineProps({
           <div class = "navbar__element navbar__element--cross" ><i class="fa fa-x"></i></div>
         </div>
         <ul class = "navbar__list navbar__list--style">
-          <li class = "navbar__item" ><RouterLink :to="{name: 'home'}">Home</RouterLink></li>
-          <li class = "navbar__item" ><RouterLink :to="{name: 'what-to-do'}">What To Do</RouterLink></li>
-          <li class = "navbar__item" ><RouterLink :to="{name: 'the-digital-divide'}">The Digital Divide</RouterLink></li>
-          <li class = "navbar__item" ><RouterLink :to="{name: 'get-involved'}">Get Involved</RouterLink></li>
-          <li class = "navbar__item" ><RouterLink :to="{name: 'our-network'}">Our Network</RouterLink></li>
-          <li class = "navbar__item" ><RouterLink :to="{name: 'insights'}">Insights</RouterLink></li>
+          <NavItem
+            v-for="(item) in store.getMenu"
+            :key="item.id"
+            :name="item.name"
+            :title="item.title"
+          />
         </ul>
         </div>
       </nav>
@@ -92,68 +88,9 @@ defineProps({
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html[data-theme=auto] .navbar__list--style {
-    color: var(--white);
-  }
-}
-html[data-theme=dark] .navbar__list--style {
-  color: var(--white);
-}
-
 .navbar__item {
   margin: 0;
   padding: 0;
-}
-
-.navbar__item a {
-  text-decoration: none;
-  font-size: 2rem;
-  word-break: keep-all;
-  cursor: pointer;
-  color: var(--light);
-}
-
-.navbar__item a:hover {
-  color: var(--dark);
-}
-
-@media (min-width: 768px) {
-  .navbar__item a {
-    font-size: 1.2rem;
-  }
-  .navbar__item a {
-    color: var(--dark);
-  }
-  .navbar__item a:hover {
-    color: var(--red-purple);
-  }
-}
-.navbar__anchor {
-  text-decoration: none;
-  font-size: 2rem;
-  word-break: keep-all;
-  cursor: pointer;
-}
-
-.navbar__anchor--style {
-  color: var(--light);
-}
-
-.navbar__anchor--style:hover {
-  color: var(--dark);
-}
-
-@media (min-width: 768px) {
-  .navbar__anchor {
-    font-size: 1.2rem;
-  }
-  .navbar__anchor--style {
-    color: var(--dark);
-  }
-  .navbar__anchor--style:hover {
-    color: var(--red-purple);
-  }
 }
 
 .navbar__element {
