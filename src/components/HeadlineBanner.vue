@@ -1,5 +1,5 @@
 <script setup>
-import {useHeadlineBannerStore} from '@/stores/heroBanner';
+import {useHeadlineBannerStore} from '@/stores/headlineBanner';
 const store = useHeadlineBannerStore();
 </script>
 
@@ -9,7 +9,7 @@ const store = useHeadlineBannerStore();
   <h1 class = "headline-box__heading" id="social-change-charity">
     {{store.getHeading}}
   </h1>
-  <p class = "headline-box__text"> {{store.getText}}</p>
+  <p class = "headline-box__text">{{store.getText}}</p>
   <button class = "headline-box__button" type="button">{{store.getButtonText}}</button>
 </section>
 </template>
