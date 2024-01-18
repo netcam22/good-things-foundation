@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router';
 import NavMenu from './components/NavMenu.vue';
 import SearchForm from './components/SearchForm.vue';
-import AboutUs from '@/components/AboutUs.vue';
+import WhatWeDo from './components/WhatWeDo.vue';
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import AboutUs from '@/components/AboutUs.vue';
       <NavMenu />
   </header>
   <RouterView />
-  <AboutUs />
+  <WhatWeDo />
 </template>
 
 <style scoped>
