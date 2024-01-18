@@ -17,6 +17,8 @@ const store = useWhatWeDoStore();
             :name="item.name"
             :heading="item.heading"
             :text="item.text"
+            :cardButton="item.cardButton"
+            :cardButtonClass="store.getCardButtonClass"
           />
       </div>
       <button class = "about-us__button about-us__button--red" type="button">{{store.getButton.text}}</button>

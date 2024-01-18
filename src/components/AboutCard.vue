@@ -11,6 +11,14 @@ defineProps({
   text: {
     type: String,
     required: true
+  },
+  cardButton: {
+    type: Object,
+    required: true
+  },
+  cardButtonClass: {
+    type: Object,
+    required: true
   }
 })
 </script>
@@ -19,7 +27,7 @@ defineProps({
   <div class = "card">
       <h2>{{ heading }}</h2>
       <p>{{ text }}</p>
-      <button :id="name" class = "card__button card__button--red" type="button">Read more</button>
+      <button :id="name" :class="cardButtonClass"  type="button">{{ cardButton }}</button>
   </div>
 </template>
 
