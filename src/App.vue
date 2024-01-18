@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router';
 import NavMenu from './components/NavMenu.vue';
 import SearchForm from './components/SearchForm.vue';
+import AboutUs from '@/components/AboutUs.vue';
 </script>
 
 <template>
@@ -12,18 +13,12 @@ import SearchForm from './components/SearchForm.vue';
       <img class = "logo" src="./assets/logo.png" alt="Good Things Foundation Logo">
       <NavMenu />
   </header>
-
   <RouterView />
+  <AboutUs />
 </template>
 
 <style scoped>
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--white);
-  color: var(--dark);
-}
 .header {
   display: flex;
   flex-direction: row;

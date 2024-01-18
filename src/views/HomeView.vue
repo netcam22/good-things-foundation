@@ -2,7 +2,7 @@
 import HeroBanner from '@/components/HeroBanner.vue';
 import HeadlineBanner from '@/components/HeadlineBanner.vue';
 import HelpBox from '@/components/HelpBox.vue';
-import AboutUs from '@/components/AboutUs.vue';
+
 </script>
 
 <template>
@@ -11,8 +11,6 @@ import AboutUs from '@/components/AboutUs.vue';
     <HeadlineBanner />
     <HelpBox />
   </main>
-    <AboutUs />
-  
 </template>
 
 <style scoped>
