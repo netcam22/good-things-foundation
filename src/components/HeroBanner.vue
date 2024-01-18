@@ -1,5 +1,4 @@
 <script setup>
-const backImg = "./../assets/volunteers.png";
 </script>
 
 <template>
