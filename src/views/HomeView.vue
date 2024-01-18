@@ -1,15 +1,15 @@
 <script setup>
-import HelloWorld from '@/components/HelloWorld.vue';
+import HeroBanner from '@/components/HeroBanner.vue';
 </script>
 
 <template>
-  <main>
-    <HelloWorld />
+  <main class = "main-content">
+    <HeroBanner />
   </main>
 </template>
 
 <style scoped>
-main {
+.main-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

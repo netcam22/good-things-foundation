@@ -10,10 +10,10 @@ defineProps({
 
 <template>
     <nav class = "navbar navbar--style" aria-label="primary">
-        <span class = "navbar__element">
-          <span class = "navbar__element navbar__element--burger"><i class="fa fa-bars"></i>
-          <span class = "navbar__element navbar__element--cross" ><i class="fa fa-x"></i></span>
-          </span>
+        <div class = "navbar__element">
+          <div class = "navbar__element navbar__element--burger"><i class="fa fa-bars"></i>
+          <div class = "navbar__element navbar__element--cross" ><i class="fa fa-x"></i></div>
+        </div>
         <ul class = "navbar__list navbar__list--style">
           <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Home</a></li>
           <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">What to do</a></li>
@@ -22,7 +22,7 @@ defineProps({
           <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Our Network</a></li>
           <li class = "navbar__item" ><a class = "navbar__anchor navbar__anchor--style" href="#">Insights</a></li>
         </ul>
-        </span>
+        </div>
       </nav>
       <!-- 
         to refactor to use vue router
