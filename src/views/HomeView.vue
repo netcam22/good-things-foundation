@@ -7,3 +7,12 @@ import HelloWorld from '@/components/HelloWorld.vue';
     <HelloWorld />
   </main>
 </template>
+
+<style scoped>
+main {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: var(--dark);
+}
+</style>
