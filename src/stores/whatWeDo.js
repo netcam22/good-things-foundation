@@ -8,7 +8,7 @@ export const useWhatWeDoStore = defineStore("whatWeDo", {
     {id: 2, name: "learn-my-way", heading: "Learn my way", text: "Lorem ipsum dolor sit amet"},
     {id: 3, name: "make-it-click", heading: "Make it click", text: "Lorem ipsum dolor sit amet"},
     {id: 4, name: "digital-you", heading: "Digital you", text: "Lorem ipsum dolor sit amet"}],
-    buttonText: {name: "more-about", text: "More about what we do"}
+    button: {name: "more-about", text: "More about what we do"}
   }),
   getters: {
     getTitle: (state) => {
@@ -20,8 +20,8 @@ export const useWhatWeDoStore = defineStore("whatWeDo", {
     getThingsWeDo: (state) => {
       return state.thingsWeDo;
     },
-    getButtonText: (state) => {
-      return state.buttonText;
+    getButton: (state) => {
+      return state.button;
     }
   },
   actions: {
