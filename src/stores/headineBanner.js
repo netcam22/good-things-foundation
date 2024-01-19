@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 
 export const useHeadlineBannerStore = defineStore("headlineBanner", {
   state: () => ({
-    section: {class: "headline headline--blue headline--thirty headline--half", aria: "get-online-week"},
+    section: {class: "headline headline--blue headline--thirty headline--half", aria: "helping-people"},
     heading: {class: "headline__heading headline__heading--box", 
       text: "We are a social change charity, helping people to improve their lives through digital."},
     paragraph: {class: "headline__text headline__text--box", 
