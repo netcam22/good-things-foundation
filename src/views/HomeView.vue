@@ -1,7 +1,7 @@
 <script setup>
 import HeroBanner from '@/components/HeroBanner.vue';
 import HeadlineBanner from '@/components/HeadlineBanner.vue';
-import HelpBox from '@/components/HelpBox.vue';
+import QuestionBox from '@/components/QuestionBox.vue';
 
 </script>
 
@@ -9,7 +9,7 @@ import HelpBox from '@/components/HelpBox.vue';
   <main class = "main-content">
     <HeroBanner />
     <HeadlineBanner />
-    <HelpBox />
+    <QuestionBox />
   </main>
 </template>
 

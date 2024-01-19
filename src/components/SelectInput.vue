@@ -37,12 +37,12 @@ defineProps({
 </template>
 
 <style scoped>
-.help-box__label {
+.question-box__label {
   background-color: var(--white);
   padding: 0.2%;
   margin: 0.2%;
 }
-.help-box__select {
+.question-box__select {
   background-color: var(--white);
   color: var(--mid-blue);
   padding: 0.2%;

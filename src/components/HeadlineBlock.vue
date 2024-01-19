@@ -49,11 +49,6 @@ defineProps({
   background-repeat: no-repeat;
   background-size: cover;
 }
-.headline--charity-people {
-  background-image: url('./../assets/charity-people.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .headline--thirty {
   min-height: 30vh;
 }
@@ -68,10 +63,12 @@ defineProps({
 @media (min-width: 768px) {
   .headline--half {
     flex-basis: 50%;
+    text-align: left;
   }
 }
 .headline__heading {
   text-align: center;
+  font-size: 1.7rem;
 }
 .headline__heading--hero {
   background-color: var(--mid-blue);
@@ -83,20 +80,28 @@ defineProps({
   width: 100%;
 }
 
-.headline__heading--box {
-  margin: 3% 0 2% 0;
-  padding: 0;
-  width:fit-content;
-}
-
-
 @media (min-width: 768px) {
   .headline__heading--hero {
     width:fit-content;
   }
 }
+
+.headline__heading--box {
+  margin: 3% 0 2% 0;
+  padding: 0;
+  width:fit-content;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .headline__heading--box {
+    text-align: left;
+  }
+}
+
 .headline__text {
   width: 100%;
+  font-size: 1.3rem;
 }
 
 .headline__text--hero {
