@@ -35,6 +35,6 @@ import HelpForm from './HelpForm.vue';
 .help-box__text {
   margin: 1% 0;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 </style>

@@ -5,12 +5,12 @@ const store = useWhatWeDoStore();
 </script>
 
 <template>
-    <section class = "about-us" aria-labelledby="what-do-we-do">
-      <h1 id="what-do-we-do" class = "about-us__heading">
+    <section class = "card-container" :aria-labelledby="store.getAriaLabel">
+      <h1 :id="store.getAriaLabel" class = "card-container__heading">
         {{store.getTitle}}
       </h1>
-      <p class = "about-us__text">{{store.getDetails}}</p>
-        <div class = "about-us__container">
+      <p class = "card-container__text">{{store.getDetails}}</p>
+        <div class = "card-container__container">
         <InfoCard
             v-for="(item) in store.getThingsWeDo"
             :key="item.id"
@@ -21,13 +21,14 @@ const store = useWhatWeDoStore();
             :cardButtonClass="store.getCardButtonClass"
           />
       </div>
-      <button class = "about-us__button about-us__button--red" type="button">{{store.getButton.text}}</button>
+      <button :id="store.getMainButton.name" :class="store.getMainButton.class" type="button">
+      {{store.getMainButton.text}}</button>
     </section>
 
 </template>
 
 <style scoped>
-.about-us {
+.card-container {
   background-color: var(--mid-blue);
   color: var(--white);
   padding: 2% 6%;
@@ -35,27 +36,27 @@ const store = useWhatWeDoStore();
   flex-direction: column;
 }
 
-.about-us__heading {
+.card-container__heading {
   margin: 0.5% 0;
   padding: 0;
   width:fit-content;
   font-size: 1.6rem;
 }
 
-.about-us__text {
+.card-container__text {
   margin: 1% 0;
   padding: 0;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 @media (min-width: 768px) {
-  .about-us__text {
+  .card-container__text {
     text-align: left;
   }
 }
 
-.about-us__container {
+.card-container__container {
   display: flex;
   box-sizing: border-box;
   flex-direction: row;
@@ -66,18 +67,18 @@ const store = useWhatWeDoStore();
 }
 
 @media (min-width: 768px) {
-  .about-us__container {
+  .card-container__container {
     gap: 1%;
   }
 }
 
 @media (min-width: 992px) {
-  .about-us__container {
+  .card-container__container {
     justify-content: space-between;
   }
 }
 
-.about-us__button {
+.card-container__button {
   border-radius: 80px;
   font-size: 1rem;
   font-weight: 600;
@@ -90,19 +91,19 @@ const store = useWhatWeDoStore();
 }
 
 @media (min-width: 768px) {
-  .about-us__button {
+  .card-container__button {
     border: none;
     padding: 1%;
   }
 }
 
-.about-us__button--red {
+.card-container__button--red {
   color: var(--red-purple);
   background-color: var(--white);
   border: var(--dark) solid 1px;
 }
 
-.about-us__button--red:hover {
+.card-container__button--red:hover {
   background-color: var(--red-purple);
   color: var(--white);
 }

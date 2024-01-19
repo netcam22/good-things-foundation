@@ -68,6 +68,7 @@ defineProps({
 }
 .headline__heading {
   text-align: center;
+  font-size: 1.7rem;
 }
 .headline__heading--hero {
   background-color: var(--mid-blue);
@@ -100,7 +101,7 @@ defineProps({
 
 .headline__text {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .headline__text--hero {
