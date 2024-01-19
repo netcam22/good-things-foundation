@@ -5,7 +5,7 @@ import HeadlineBlock from './HeadlineBlock.vue';
 </script>
 
 <template>
-<div class = "headline-box headline-box--image"></div>
+<div :class = "store.getImage.class"></div>
 <HeadlineBlock
       :section="store.getSection"
       :heading="store.getHeading"
@@ -15,8 +15,7 @@ import HeadlineBlock from './HeadlineBlock.vue';
 </template>
 
 <style scoped>
-.headline-box {
-  min-height: 30vh;
+.image-box {
   flex-basis: 100%;
   background-position: center;
   margin: 0;
@@ -25,15 +24,17 @@ import HeadlineBlock from './HeadlineBlock.vue';
 }
 
 @media (min-width: 768px) {
-  .headline-box {
+  .image-box {
     flex-basis: 50%;
   }
 }
-
-.headline-box--image {
+.image-box--charity-people {
   background-image: url('./../assets/charity-people.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+.image-box--thirty {
+  min-height: 30vh;
 }
 
 </style>
