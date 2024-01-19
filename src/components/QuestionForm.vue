@@ -1,7 +1,7 @@
 <script setup>
-import {useHelpFormStore} from '@/stores/helpForm';
+import {useQuestionFormStore} from '@/stores/questionForm';
 import SelectInput from './SelectInput.vue';
-const store = useHelpFormStore();
+const store = useQuestionFormStore();
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const store = useHelpFormStore();
 </template>
 
 <style scoped>
-.help-box__form {
+.question-box__form {
   background-color: var(--white);
   padding: 1%;
   margin: 1% 0;
@@ -33,12 +33,12 @@ const store = useHelpFormStore();
 }
 
 @media (min-width: 768px) {
-  .help-box__form {
+  .question-box__form {
     flex-direction: row;
   }
 }
 
-.help-box__button {
+.question-box__button {
   margin: 2% 1%;
   padding: 2%;
   border-radius: 20px;
@@ -48,20 +48,20 @@ const store = useHelpFormStore();
   width: fit-content;
 }
 
-.help-box__button--red {
+.question-box__button--red {
   background-color: var(--red-purple);
   color: var(--white);
   border: var(--white) solid 1px;
 }
 
-.help-box__button--red:hover {
+.question-box__button--red:hover {
   background-color: var(--white);
   color: var(--red-purple);
   border: var(--red-purple) solid 1px;
 }
 
 @media (min-width: 768px) {
-  .help-box__button  {
+  .question-box__button  {
     margin: 0.2%;
     padding: 0.6%;
     font-size: 1rem;
