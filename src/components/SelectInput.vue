@@ -14,7 +14,7 @@ defineProps({
     required: true
     },
     selectId: {
-    type: Number,
+    type: String,
     required: true
     },
     options: {
@@ -25,7 +25,7 @@ defineProps({
 </script>
 
 <template>
-    <label :class="labelClass" for="i-am">{{ label }}</label>
+    <label :class="labelClass" :for="selectId">{{ label }}</label>
       <select :class="selectClass" :id="selectId">
           <SelectOption
             v-for="(item) in options"
