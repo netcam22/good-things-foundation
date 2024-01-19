@@ -1,6 +1,6 @@
 <script setup>
 import { useWhatWeDoStore } from '@/stores/whatWeDo';
-import AboutCard from './AboutCard.vue';
+import InfoCard from './InfoCard.vue';
 const store = useWhatWeDoStore();
 </script>
 
@@ -11,7 +11,7 @@ const store = useWhatWeDoStore();
       </h1>
       <p class = "about-us__text">{{store.getDetails}}</p>
         <div class = "about-us__container">
-        <AboutCard
+        <InfoCard
             v-for="(item) in store.getThingsWeDo"
             :key="item.id"
             :name="item.name"
