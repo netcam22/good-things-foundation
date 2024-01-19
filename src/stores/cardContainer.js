@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia';
 
-export const useWhatWeDoStore = defineStore("whatWeDo", {
+export const useCardContainerStore = defineStore("cardContainer", {
   state: () => ({
     title: "What do we do?",
     ariaLabel: "what-do-we-do",
     details: "You might not have heard of us, but we're the people behind the following impactful programmes.",
-    thingsWeDo: [{id: 1, name: "get-online", heading: "Get online week", text: "Lorem ipsum dolor sit amet", cardButton: "Read more"}, 
+    cardContent: [{id: 1, name: "get-online", heading: "Get online week", text: "Lorem ipsum dolor sit amet", cardButton: "Read more"}, 
     {id: 2, name: "learn-my-way", heading: "Learn my way", text: "Lorem ipsum dolor sit amet", cardButton: "Read more"},
     {id: 3, name: "make-it-click", heading: "Make it click", text: "Lorem ipsum dolor sit amet", cardButton: "Read more"},
     {id: 4, name: "digital-you", heading: "Digital you", text: "Lorem ipsum dolor sit amet", cardButton: "Read more"}],
@@ -22,8 +22,8 @@ export const useWhatWeDoStore = defineStore("whatWeDo", {
     getDetails: (state) => {
       return state.details;
     },
-    getThingsWeDo: (state) => {
-      return state.thingsWeDo;
+    getCardContent: (state) => {
+      return state.cardContent;
     },
     getCardButtonClass: (state) => {
       return state.cardButtonClass;

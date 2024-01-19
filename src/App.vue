@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router';
 import NavMenu from './components/NavMenu.vue';
 import SearchForm from './components/SearchForm.vue';
-import WhatWeDo from './components/WhatWeDo.vue';
+import CardContainer from './components/CardContainer.vue';
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import WhatWeDo from './components/WhatWeDo.vue';
       <NavMenu />
   </header>
   <RouterView />
-  <WhatWeDo />
+  <CardContainer />
 </template>
 
 <style scoped>
@@ -43,7 +43,6 @@ import WhatWeDo from './components/WhatWeDo.vue';
     width:15%;
   }
 }
-
 
 .mode-button {
   flex-basis: 22%;
