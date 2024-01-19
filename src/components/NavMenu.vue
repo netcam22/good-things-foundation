@@ -1,7 +1,8 @@
 <script setup>
 import NavItem from './NavItem.vue';
 import { useNavItemsStore } from '@/stores/navItems';
-const store = useNavItemsStore();
+import { appStore } from '../store.js';
+const store = useNavItemsStore(appStore);
 </script>
 
 <template>
@@ -10,7 +11,7 @@ const store = useNavItemsStore();
           <div class = "navbar__element navbar__element--burger"><i class="fa fa-bars"></i>
           <div class = "navbar__element navbar__element--cross" ><i class="fa fa-x"></i></div>
         </div>
-        <ul class = "navbar__list navbar__list--style">
+        <ul id = "menu" class = "navbar__list navbar__list--style">
           <NavItem
             v-for="(item) in store.getMenu"
             :key="item.id"
@@ -69,7 +70,6 @@ const store = useNavItemsStore();
   margin: 0;
   line-height: 3rem;
 }
-
 .navbar__list--style {
   background-color: var(--mid-blue);
 }
@@ -122,7 +122,7 @@ const store = useNavItemsStore();
   color: var(--dark);
   display: block;
   position: fixed;
-  top: 1%;
+  top: 4%;
   z-index: 2000;
   margin-right: 2%;
   font-size: 3rem;

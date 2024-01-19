@@ -1,7 +1,8 @@
 <script setup>
 import {useQuestionFormStore} from '@/stores/questionForm';
 import SelectInput from './SelectInput.vue';
-const store = useQuestionFormStore();
+import { appStore } from '../store.js';
+const store = useQuestionFormStore(appStore);
 </script>
 
 <template>

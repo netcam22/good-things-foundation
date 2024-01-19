@@ -1,7 +1,8 @@
 <script setup>
 import { useCardContainerStore } from '@/stores/cardContainer';
+import { appStore } from '../store.js';
+const store = useCardContainerStore(appStore);
 import InfoCard from './InfoCard.vue';
-const store = useCardContainerStore();
 </script>
 
 <template>

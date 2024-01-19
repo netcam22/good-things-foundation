@@ -1,6 +1,7 @@
 <script setup>
 import {useQuestionBoxStore} from '@/stores/questionBox';
-const store = useQuestionBoxStore();
+import { appStore } from '../store.js';
+const store = useQuestionBoxStore(appStore);
 import QuestionForm from './QuestionForm.vue';
 </script>
 

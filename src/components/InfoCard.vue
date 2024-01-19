@@ -13,11 +13,11 @@ defineProps({
     required: true
   },
   cardButton: {
-    type: Object,
+    type: String,
     required: true
   },
   cardButtonClass: {
-    type: Object,
+    type: String,
     required: true
   }
 })
