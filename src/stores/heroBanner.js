@@ -2,19 +2,23 @@ import { defineStore } from 'pinia';
 
 export const useHeroBannerStore = defineStore("heroBanner", {
   state: () => ({
-    heading: "Get online week 2021",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    buttonText: "Get involved now!"
+    section: {class: "headline headline--image", aria: "get-online-week"},
+    heading: {class: "headline__heading headline__heading--hero", text: "Get online week 2021"},
+    paragraph: {class: "headline__text headline__text--hero", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+    button: {class: "headline__button headline__button--hero", text: "Get involved now!"}
   }),
   getters: {
+    getSection: (state) => {
+      return state.section;
+    },
     getHeading: (state) => {
       return state.heading;
     },
-    getText: (state) => {
-      return state.text;
+    getParagraph: (state) => {
+      return state.paragraph;
     },
-    getButtonText: (state) => {
-      return state.buttonText;
+    getButton: (state) => {
+      return state.button;
     }
   },
   actions: {
