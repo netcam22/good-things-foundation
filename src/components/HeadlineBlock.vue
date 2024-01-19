@@ -34,20 +34,40 @@ defineProps({
 .headline {
   margin: 0;
   text-align: center;
-}
-.headline--image {
-  background-image: url("./../assets/volunteers.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 50vh;
   flex-basis: 100%;
   background-position: center;
   padding: 2% 6%;
 }
 
 @media (min-width: 768px) {
-  .headline--image {
+  .headline {
     text-align: left;
+  }
+}
+.headline--volunteers {
+  background-image: url("./../assets/volunteers.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.headline--charity-people {
+  background-image: url('./../assets/charity-people.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.headline--thirty {
+  min-height: 30vh;
+}
+.headline--fifty {
+  min-height: 50vh;
+}
+.headline--blue {
+  background-color: var(--mid-blue);
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .headline--half {
+    flex-basis: 50%;
   }
 }
 .headline__heading {
@@ -62,6 +82,13 @@ defineProps({
   padding: 1% 2%;
   width: 100%;
 }
+
+.headline__heading--box {
+  margin: 3% 0 2% 0;
+  padding: 0;
+  width:fit-content;
+}
+
 
 @media (min-width: 768px) {
   .headline__heading--hero {
@@ -87,19 +114,24 @@ defineProps({
   }
 }
 
+.headline__text--box {
+  margin: 1% 0;
+  padding: 0;
+}
+
 .headline__button {
   cursor: pointer;
-}
-.headline__button--hero {
   font-size: 1rem;
+  padding: 1.5%;
   font-weight: 600;
   cursor: pointer;
   width: fit-content;
+  border-radius: 80px;
+}
+.headline__button--hero {
   margin: 0 0 3% 0;
-  padding: 1.5%;
   background-color: var(--white);
   border: var(--white) solid 1px;
-  border-radius: 80px;
   color: var(--red-purple); 
 }
 
@@ -113,5 +145,16 @@ defineProps({
   .headline__button--hero {
     padding: 1%;
   }
+}
+.headline__button--box {
+  margin: 1% 0 3% 0;
+  background-color: transparent;
+  border: var(--white) solid 2px;
+  color: var(--white);
+}
+
+.headline__button--box:hover {
+  background-color: var(--white);
+  color: var(--mid-blue);
 }
 </style>
