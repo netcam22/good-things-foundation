@@ -4,7 +4,7 @@ const store = useHeadlineBannerStore();
 </script>
 
 <template>
-<section class = "headline-box headline-box--image"></section>
+<div class = "headline-box headline-box--image"></div>
 <section class = "headline-box headline-box--blue" aria-labelledby="social-change-charity">
   <h1 class = "headline-box__heading" id="social-change-charity">
     {{store.getHeading}}
