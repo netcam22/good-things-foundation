@@ -35,6 +35,7 @@ import InfoCard from './InfoCard.vue';
   padding: 2% 6%;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .card-container__heading {
@@ -47,14 +48,7 @@ import InfoCard from './InfoCard.vue';
 .card-container__text {
   margin: 1% 0;
   padding: 0;
-  text-align: center;
   font-size: 1.3rem;
-}
-
-@media (min-width: 768px) {
-  .card-container__text {
-    text-align: left;
-  }
 }
 
 .card-container__container {
