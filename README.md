@@ -4,7 +4,7 @@ by Annette Le Sage version 1.0 (updated 21/1/24)
 
 ## Introduction 🧑
 
-This is a demo project for a sample charity website in the form of a Single Page Application. It has been develped with 'Vue' - [Vue](https://vuejs.org/), using 'Vite' - [Vite](https://vitejs.dev/guide/).
+This is a demo project for a sample charity website in the form of a Single Page Application. It has been developed with 'Vue' - [Vue](https://vuejs.org/), using 'Vite' - [Vite](https://vitejs.dev/guide/).
 
 ## Project Structure
 
