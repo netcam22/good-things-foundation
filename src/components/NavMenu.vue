@@ -86,11 +86,6 @@ const store = useNavItemsStore(appStore);
   }
 }
 
-.navbar__item {
-  margin: 0;
-  padding: 0;
-}
-
 .navbar__element {
   margin: 0 1%;
   padding: 0;
