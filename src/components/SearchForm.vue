@@ -6,7 +6,7 @@
   <form class = 'search-form'>
     <label class = 'search-form__icon' for="search">
         <i title = "search" aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
-        <span class="sr-only">Search input field</span>
+        <span class="search-form__sr-only">Search input field</span>
       </label>
     <input class = 'search-form__input' type="search" id="search" name="search" placeholder="Search">
   </form>
@@ -23,6 +23,14 @@
   .search-form {
     flex-basis: 78%;
   } 
+}
+.search-form__sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 .search-form__icon{
   font-size: 1.4rem;
