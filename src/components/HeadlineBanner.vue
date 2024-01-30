@@ -1,5 +1,5 @@
 <script setup>
-import { useHeadlineBannerStore } from '@/stores/headineBanner';
+import { useHeadlineBannerStore } from '@/stores/headlineBanner';
 import { appStore } from '../store.js';
 const store = useHeadlineBannerStore(appStore);
 import HeadlineBlock from './HeadlineBlock.vue';
